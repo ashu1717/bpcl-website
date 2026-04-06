@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bareilly Premier Corporate League — Player Registration</title>
+  <meta name="description" content="Register for the Bareilly Premier Corporate League Season 2026. Pay ₹1500, showcase your cricket talent, and get selected for BPCL teams.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ═══════════ NAVBAR ═══════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-shield">🏏</span>
+        <span class="logo-text">BPCL</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#how-to">How to Register</a></li>
+        <li><a href="#register">Register</a></li>
+        <li><a href="#refund-policy">Refund Policy</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══════════ §1 HERO ═══════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-pattern"></div>
+    <div class="hero-content">
+      <div class="hero-badge">Season 2026</div>
+      <div class="hero-shield">
+        <div class="shield-emblem">
+          <div class="shield-icon">🏏</div>
+          <div class="shield-ring"></div>
+        </div>
+      </div>
+      <h1 class="hero-title">Bareilly Premier Corporate League</h1>
+      <p class="hero-tagline">Register Your Legacy</p>
+      <p class="hero-sub">The biggest cricket league of Bareilly is back. Show your talent, join the battle, and play for glory.</p>
+      <a href="#register" class="btn btn-gold hero-cta">Register Now — ₹1,500</a>
+      <p class="hero-refund-note">50% refundable if not selected</p>
+    </div>
+    <div class="hero-scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════ §2 HOW TO REGISTER ═══════════ -->
+  <section class="section how-to" id="how-to">
+    <div class="container">
+      <h2 class="section-title fade-in">How to Register</h2>
+      <p class="section-subtitle fade-in">Four simple steps to join BPCL Season 2026</p>
+      <div class="steps-grid">
+        <div class="step-card fade-in">
+          <div class="step-number">1</div>
+          <div class="step-icon">📝</div>
+          <h3>Fill Player Details</h3>
+          <p>Enter your personal info, cricket profile, and CricHeroes link</p>
+        </div>
+        <div class="step-card fade-in">
+          <div class="step-number">2</div>
+          <div class="step-icon">💳</div>
+          <h3>Pay ₹1,500 via UPI</h3>
+          <p>Scan the QR code or use the UPI ID to pay the registration fee</p>
+        </div>
+        <div class="step-card fade-in">
+          <div class="step-number">3</div>
+          <div class="step-icon">📸</div>
+          <h3>Upload Screenshot</h3>
+          <p>Take a screenshot of your payment confirmation and upload it</p>
+        </div>
+        <div class="step-card fade-in">
+          <div class="step-number">4</div>
+          <div class="step-icon">✅</div>
+          <h3>Await Confirmation</h3>
+          <p>We'll verify your payment and confirm via WhatsApp / Email within 24 hours</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ §3 REGISTRATION FORM ═══════════ -->
+  <section class="section register-section" id="register">
+    <div class="container">
+      <h2 class="section-title fade-in">Player Registration</h2>
+      <p class="section-subtitle fade-in">BPCL Season 2026 — Limited Slots Available</p>
+
+      <!-- Progress Bar -->
+      <div class="progress-bar fade-in" id="progressBar">
+        <div class="progress-step active" data-step="1">
+          <div class="progress-dot">1</div>
+          <span>Player Details</span>
+        </div>
+        <div class="progress-line">
+          <div class="progress-line-fill" id="progressLineFill"></div>
+        </div>
+        <div class="progress-step" data-step="2" id="progressStep2">
+          <div class="progress-dot">2</div>
+          <span>Payment</span>
+        </div>
+      </div>
+
+      <!-- Registration Form -->
+      <form id="registrationForm" novalidate>
+
+        <!-- ─── STEP 1: Player Details ─── -->
+        <div class="form-step active" id="step1">
+          <h3 class="form-step-title">Step 1 of 2 — Player Details</h3>
+
+          <!-- Personal Info -->
+          <fieldset class="form-group">
+            <legend>Personal Information</legend>
+
+            <div class="field">
+              <label for="fullName">Full Name <span class="req">*</span></label>
+              <input type="text" id="fullName" name="fullName" required placeholder="e.g. Virat Sharma" autocomplete="name">
+              <div class="field-error"></div>
+            </div>
+
+            <div class="field">
+              <label for="dob">Date of Birth <span class="req">*</span></label>
+              <input type="date" id="dob" name="dob" required>
+              <div class="field-error"></div>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="mobile">Mobile Number <span class="req">*</span></label>
+                <input type="tel" id="mobile" name="mobile" required placeholder="10-digit number" pattern="[6-9][0-9]{9}" maxlength="10">
+                <div class="field-error"></div>
+              </div>
+              <div class="field">
+                <label for="whatsapp">WhatsApp Number <span class="req">*</span></label>
+                <div class="checkbox-inline">
+                  <input type="checkbox" id="sameAsMobile" checked>
+                  <label for="sameAsMobile" class="checkbox-label">Same as mobile</label>
+                </div>
+                <input type="tel" id="whatsapp" name="whatsapp" required placeholder="10-digit number" pattern="[6-9][0-9]{9}" maxlength="10" disabled>
+                <div class="field-error"></div>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="email">Email Address <span class="req">*</span></label>
+              <input type="email" id="email" name="email" required placeholder="you@example.com" autocomplete="email">
+              <div class="field-error"></div>
+            </div>
+
+            <div class="field">
+              <label for="address">Full Address <span class="req">*</span></label>
+              <textarea id="address" name="address" required placeholder="House no, street, locality..." rows="3"></textarea>
+              <div class="field-error"></div>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="city">City <span class="req">*</span></label>
+                <input type="text" id="city" name="city" required placeholder="e.g. Bareilly" value="Bareilly">
+                <div class="field-error"></div>
+              </div>
+              <div class="field">
+                <label for="pincode">PIN Code <span class="req">*</span></label>
+                <input type="text" id="pincode" name="pincode" required placeholder="6-digit PIN" pattern="[0-9]{6}" maxlength="6">
+                <div class="field-error"></div>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Cricket Profile -->
+          <fieldset class="form-group">
+            <legend>Cricket Profile</legend>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="role">Playing Role <span class="req">*</span></label>
+                <select id="role" name="role" required>
+                  <option value="">Select Role</option>
+                  <option value="Batsman">Batsman</option>
+                  <option value="Bowler">Bowler</option>
+                  <option value="All-Rounder">All-Rounder</option>
+                  <option value="Wicket-Keeper">Wicket-Keeper</option>
+                </select>
+                <div class="field-error"></div>
+              </div>
+              <div class="field">
+                <label for="battingStyle">Batting Style <span class="req">*</span></label>
+                <select id="battingStyle" name="battingStyle" required>
+                  <option value="">Select</option>
+                  <option value="Right Hand">Right Hand</option>
+                  <option value="Left Hand">Left Hand</option>
+                </select>
+                <div class="field-error"></div>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="bowlingStyle">Bowling Style</label>
+              <select id="bowlingStyle" name="bowlingStyle">
+                <option value="N/A">N/A</option>
+                <option value="Fast">Fast</option>
+                <option value="Medium-Fast">Medium-Fast</option>
+                <option value="Medium">Medium</option>
+                <option value="Off-Spin">Off-Spin</option>
+                <option value="Leg-Spin">Leg-Spin</option>
+                <option value="Left-Arm Spin">Left-Arm Spin</option>
+              </select>
+              <div class="field-error"></div>
+            </div>
+
+            <div class="field">
+              <label for="jerseyNumber">Preferred Jersey Number (1–99)</label>
+              <input type="number" id="jerseyNumber" name="jerseyNumber" min="1" max="99" placeholder="e.g. 18">
+              <div class="field-error"></div>
+            </div>
+
+          </fieldset>
+
+          <!-- Online Profiles -->
+          <fieldset class="form-group">
+            <legend>Online Profiles</legend>
+
+            <div class="field">
+              <label for="cricheroes">CricHeroes Profile Link <span class="req">*</span></label>
+              <input type="url" id="cricheroes" name="cricheroes" required placeholder="https://cricheroes.in/player/your-profile">
+              <p class="field-helper">No account? Create one free at <a href="https://cricheroes.in" target="_blank" rel="noopener">cricheroes.in</a></p>
+              <div class="field-error"></div>
+            </div>
+          </fieldset>
+
+          <!-- Declaration -->
+          <fieldset class="form-group declaration-group">
+            <legend>Declaration</legend>
+
+            <div class="checkbox-field">
+              <input type="checkbox" id="declareAccurate" required>
+              <label for="declareAccurate">I confirm all information provided is accurate <span class="req">*</span></label>
+              <div class="field-error"></div>
+            </div>
+
+            <div class="checkbox-field">
+              <input type="checkbox" id="declareRules" required>
+              <label for="declareRules">I agree to abide by BPCL rules & regulations <span class="req">*</span></label>
+              <div class="field-error"></div>
+            </div>
+
+            <div class="checkbox-field">
+              <input type="checkbox" id="declareRefund" required>
+              <label for="declareRefund">I understand that ₹750 (50% of registration fee) is refundable if I am not selected in the final squad <span class="req">*</span></label>
+              <div class="field-error"></div>
+            </div>
+          </fieldset>
+
+          <div class="form-actions">
+            <button type="button" class="btn btn-gold btn-lg" id="toStep2">Proceed to Payment →</button>
+          </div>
+        </div>
+
+        <!-- ─── STEP 2: UPI Payment ─── -->
+        <div class="form-step" id="step2">
+          <h3 class="form-step-title">Step 2 of 2 — Payment</h3>
+
+          <!-- Refund Policy Banner -->
+          <div class="refund-banner">
+            <div class="refund-banner-icon">💰</div>
+            <div class="refund-banner-content">
+              <strong>Refund Policy</strong>
+              <p>If you are NOT selected in the final BPCL squad, ₹750 (50% of your ₹1,500 fee) will be refunded to your original UPI account within 7 working days after team announcement.</p>
+            </div>
+          </div>
+
+          <!-- Payment Card -->
+          <div class="payment-card">
+            <div class="payment-card-header">
+              <span class="payment-icon">🏏</span>
+              <span>Registration Fee</span>
+            </div>
+            <div class="payment-amount">₹ 1,500</div>
+            <p class="payment-league">Bareilly Premier Corporate League — Season 2026</p>
+
+            <div class="qr-wrapper">
+              <img id="upiQr" src="qr-code.png" alt="UPI QR — Scan to Pay ₹1500" class="qr-image"
+                   onerror="this.style.display='none'; document.getElementById('qrFallback').style.display='flex';">
+              <div id="qrFallback" class="qr-fallback" style="display:none;">
+                <span>QR Code</span>
+                <small>Add your qr-code.png file</small>
+              </div>
+            </div>
+
+            <!-- 🔴 REPLACE: Change this to your actual UPI ID -->
+            <div class="upi-id-row">
+              <span class="upi-label">UPI ID:</span>
+              <code class="upi-id" id="upiId">9457962508@hdfc</code>
+              <button type="button" class="btn-copy" id="copyUpi" title="Copy UPI ID">Copy</button>
+            </div>
+            <p class="payment-note">Pay ₹1,500 · ₹750 refundable if not selected</p>
+          </div>
+
+          <!-- Toast -->
+          <div class="toast" id="toast">Copied!</div>
+
+          <!-- Post-Payment Fields -->
+          <fieldset class="form-group payment-fields">
+            <legend>Payment Verification</legend>
+
+            <div class="field">
+              <label for="txnId">UPI Transaction ID <span class="req">*</span></label>
+              <input type="text" id="txnId" name="txnId" required placeholder="e.g. 425112345678" pattern="[A-Za-z0-9]+" maxlength="30">
+              <p class="field-helper">Find this in your UPI app's payment history</p>
+              <div class="field-error"></div>
+            </div>
+
+            <div class="field">
+              <label for="screenshot">Payment Screenshot <span class="req">*</span></label>
+              <div class="file-upload" id="fileUploadArea">
+                <input type="file" id="screenshot" name="screenshot" accept="image/*" required class="file-input">
+                <div class="file-upload-content" id="fileUploadContent">
+                  <span class="file-upload-icon">📸</span>
+                  <span>Click or drag to upload screenshot</span>
+                  <small>Max 5 MB · JPG, PNG, WebP</small>
+                </div>
+                <div class="file-preview" id="filePreview" style="display:none;">
+                  <img id="previewImg" alt="Payment screenshot preview">
+                  <button type="button" class="btn-remove-file" id="removeFile">✕ Remove</button>
+                </div>
+              </div>
+              <div class="field-error"></div>
+            </div>
+
+            <div class="field">
+              <label for="paymentApp">Payment App Used <span class="req">*</span></label>
+              <select id="paymentApp" name="paymentApp" required>
+                <option value="">Select App</option>
+                <option value="PhonePe">PhonePe</option>
+                <option value="Google Pay">Google Pay</option>
+                <option value="Paytm">Paytm</option>
+                <option value="BHIM">BHIM</option>
+                <option value="Amazon Pay">Amazon Pay</option>
+                <option value="Other">Other</option>
+              </select>
+              <div class="field-error"></div>
+            </div>
+          </fieldset>
+
+          <div class="form-actions form-actions-split">
+            <button type="button" class="btn btn-outline" id="backToStep1">← Edit Player Details</button>
+            <button type="submit" class="btn btn-gold btn-lg" id="submitBtn">
+              <span class="btn-text">Submit Registration ✓</span>
+              <span class="btn-spinner" style="display:none;"></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- ─── SUCCESS STATE ─── -->
+        <div class="form-step" id="successState">
+          <div class="success-card">
+            <div class="success-checkmark">
+              <svg viewBox="0 0 52 52" class="checkmark-svg">
+                <circle cx="26" cy="26" r="25" fill="none" class="checkmark-circle"/>
+                <path fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" class="checkmark-check"/>
+              </svg>
+            </div>
+            <h3 class="success-title">You're Registered!</h3>
+            <p class="success-subtitle">Your registration is under review. We'll confirm within 24 hours on your WhatsApp / Email once payment is verified.</p>
+            <div class="success-summary" id="successSummary"></div>
+            <p class="success-refund-note">Reminder: ₹750 is refundable if you are not selected.</p>
+            <button type="button" class="btn btn-gold" id="shareBtn">Share with a Friend</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ═══════════ §4 REFUND POLICY ═══════════ -->
+  <section class="section refund-section" id="refund-policy">
+    <div class="container">
+      <h2 class="section-title fade-in">Refund Policy</h2>
+      <div class="refund-card fade-in">
+        <ul class="refund-list">
+          <li>
+            <span class="refund-icon green">✅</span>
+            <div><strong>Registration fee:</strong> ₹1,500 (one-time, non-negotiable)</div>
+          </li>
+          <li>
+            <span class="refund-icon gold">💰</span>
+            <div><strong>If NOT selected:</strong> ₹750 (50%) refunded to your UPI account</div>
+          </li>
+          <li>
+            <span class="refund-icon red">❌</span>
+            <div><strong>If selected & you withdraw:</strong> No refund applicable</div>
+          </li>
+          <li>
+            <span class="refund-icon blue">⏱</span>
+            <div><strong>Refund timeline:</strong> Within 7 working days after team announcement</div>
+          </li>
+          <li>
+            <span class="refund-icon purple">📲</span>
+            <div><strong>Refund method:</strong> Returned to the same UPI ID used for payment</div>
+          </li>
+        </ul>
+        <!-- 🔴 REPLACE: Add your WhatsApp number below -->
+        <p class="refund-contact">For refund queries, contact us on WhatsApp: <a href="https://wa.me/917310733916">+91 73107 33916</a> / <a href="https://wa.me/918384888601">+91 83848 88601</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ §5 ABOUT BPCL ═══════════ -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <h2 class="section-title fade-in">About BPCL</h2>
+      <p class="about-text fade-in">The Bareilly Premier Corporate League (BPCL) is Bareilly's most exciting cricket tournament, bringing together the best local talent for a thrilling season of competitive cricket. Whether you're a seasoned player or an emerging talent, BPCL gives you the stage to showcase your skills, compete with the best, and be part of something unforgettable.</p>
+      <div class="stats-row fade-in">
+        <div class="stat">
+          <div class="stat-number">8+</div>
+          <div class="stat-label">Teams</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">100+</div>
+          <div class="stat-label">Players</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">3</div>
+          <div class="stat-label">Seasons</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">30+</div>
+          <div class="stat-label">Matches</div>
+        </div>
+      </div>
+      <div class="contact-row fade-in">
+        <!-- 🔴 REPLACE: Add your actual contact details -->
+        <a href="https://wa.me/917310733916" class="contact-link">📱 WhatsApp</a>
+        <a href="mailto:help.bpcl2026@gmail.com" class="contact-link">📧 help.bpcl2026@gmail.com</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ §6 FOOTER ═══════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="logo-shield">🏏</span>
+          <span class="logo-text">BPCL</span>
+        </div>
+        <div class="footer-socials">
+          <!-- 🔴 REPLACE: Add your social links -->
+          <a href="#" aria-label="Instagram" class="social-icon">📷</a>
+          <a href="#" aria-label="YouTube" class="social-icon">▶️</a>
+          <a href="#" aria-label="Facebook" class="social-icon">📘</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Bareilly Premier Corporate League. All rights reserved.</p>
+        <p class="footer-tagline">Powered by love for cricket 🏏</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
