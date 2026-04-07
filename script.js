@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════════════
-   BAREILLY PREMIER LEAGUE — script.js
+   BAREILLY CORPORATE LEAGUE 3 — script.js
    Multi-step form · Validation · UPI copy · Supabase submit
    ═══════════════════════════════════════════════════════════════════════ */
 
@@ -302,6 +302,10 @@
         batting_style:    document.getElementById('battingStyle').value,
         bowling_style:    document.getElementById('bowlingStyle').value,
         jersey_number:    parseInt(document.getElementById('jerseyNumber').value) || null,
+        tshirt_type:      document.getElementById('tshirtType').value,
+        tshirt_size:      parseInt(document.getElementById('tshirtSize').value) || null,
+        lower_type:       document.getElementById('lowerType').value,
+        lower_size:       parseInt(document.getElementById('lowerSize').value) || null,
         cricheroes_link:  document.getElementById('cricheroes').value.trim(),
         upi_transaction_id: document.getElementById('txnId').value.trim(),
         payment_app:      document.getElementById('paymentApp').value,
@@ -344,8 +348,8 @@
   // ─── Share Button ─────────────────────────────────────────────────
   shareBtn.addEventListener('click', function () {
     var shareData = {
-      title: 'Bareilly Premier Corporate League — Player Registration',
-      text: 'Register for BPCL Season 2026! Pay ₹1,500 and showcase your cricket talent. 50% refundable if not selected.',
+      title: 'Bareilly Corporate League 3 — Player Registration',
+      text: 'Register for BCL 3 — Season 2026! Pay ₹2,000 and showcase your cricket talent. 50% refundable if not selected.',
       url: window.location.href
     };
 

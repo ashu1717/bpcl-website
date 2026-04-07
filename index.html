@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bareilly Premier Corporate League — Player Registration</title>
-  <meta name="description" content="Register for the Bareilly Premier Corporate League Season 2026. Pay ₹1500, showcase your cricket talent, and get selected for BPCL teams.">
+  <title>Bareilly Corporate League 3 — Player Registration</title>
+  <meta name="description" content="Register for BCL 3 — Bareilly Corporate League 3, 2026. Pay ₹2000, showcase your cricket talent, and get selected for BCL teams.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
@@ -17,7 +17,7 @@
     <div class="nav-container">
       <a href="#hero" class="nav-logo">
         <span class="logo-shield">🏏</span>
-        <span class="logo-text">BPCL</span>
+        <span class="logo-text">BCL 3</span>
       </a>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu">
         <span></span><span></span><span></span>
@@ -36,17 +36,20 @@
   <section class="hero" id="hero">
     <div class="hero-bg-pattern"></div>
     <div class="hero-content">
-      <div class="hero-badge">Season 2026</div>
+      <div class="hero-badge">Season 3 — 2026</div>
       <div class="hero-shield">
         <div class="shield-emblem">
           <div class="shield-icon">🏏</div>
           <div class="shield-ring"></div>
         </div>
       </div>
-      <h1 class="hero-title">Bareilly Premier Corporate League</h1>
+      <h1 class="hero-title">Bareilly Corporate League 3</h1>
       <p class="hero-tagline">Register Your Legacy</p>
       <p class="hero-sub">The biggest cricket league of Bareilly is back. Show your talent, join the battle, and play for glory.</p>
-      <a href="#register" class="btn btn-gold hero-cta">Register Now — ₹1,500</a>
+      <div class="hero-venue">
+        <a href="https://maps.app.goo.gl/mzXbxak5YeVzdWTc6" target="_blank" rel="noopener" class="venue-link">📍 GP Cricket Ground — Suresh Sharma Nagar, Bareilly</a>
+      </div>
+      <a href="#register" class="btn btn-gold hero-cta">Register Now — ₹2,000</a>
       <p class="hero-refund-note">50% refundable if not selected</p>
     </div>
     <div class="hero-scroll-indicator">
@@ -59,7 +62,7 @@
   <section class="section how-to" id="how-to">
     <div class="container">
       <h2 class="section-title fade-in">How to Register</h2>
-      <p class="section-subtitle fade-in">Four simple steps to join BPCL Season 2026</p>
+      <p class="section-subtitle fade-in">Four simple steps to join BCL 3 — Season 2026</p>
       <div class="steps-grid">
         <div class="step-card fade-in">
           <div class="step-number">1</div>
@@ -70,7 +73,7 @@
         <div class="step-card fade-in">
           <div class="step-number">2</div>
           <div class="step-icon">💳</div>
-          <h3>Pay ₹1,500 via UPI</h3>
+          <h3>Pay ₹2,000 via UPI</h3>
           <p>Scan the QR code or use the UPI ID to pay the registration fee</p>
         </div>
         <div class="step-card fade-in">
@@ -93,7 +96,7 @@
   <section class="section register-section" id="register">
     <div class="container">
       <h2 class="section-title fade-in">Player Registration</h2>
-      <p class="section-subtitle fade-in">BPCL Season 2026 — Limited Slots Available</p>
+      <p class="section-subtitle fade-in">BCL 3 — Season 2026 — Limited Slots Available</p>
 
       <!-- Progress Bar -->
       <div class="progress-bar fade-in" id="progressBar">
@@ -225,6 +228,63 @@
 
           </fieldset>
 
+          <!-- T-Shirt & Lowers -->
+          <fieldset class="form-group">
+            <legend>Kit Preferences</legend>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="tshirtType">T-Shirt Type <span class="req">*</span></label>
+                <select id="tshirtType" name="tshirtType" required>
+                  <option value="">Select Type</option>
+                  <option value="Half Sleeve">Half Sleeve</option>
+                  <option value="Full Sleeve">Full Sleeve</option>
+                </select>
+                <div class="field-error"></div>
+              </div>
+              <div class="field">
+                <label for="tshirtSize">T-Shirt Size <span class="req">*</span></label>
+                <select id="tshirtSize" name="tshirtSize" required>
+                  <option value="">Select Size</option>
+                  <option value="36">36</option>
+                  <option value="38">38</option>
+                  <option value="40">40</option>
+                  <option value="42">42</option>
+                  <option value="44">44</option>
+                  <option value="46">46</option>
+                  <option value="48">48</option>
+                </select>
+                <div class="field-error"></div>
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="lowerType">Lowers Type <span class="req">*</span></label>
+                <select id="lowerType" name="lowerType" required>
+                  <option value="">Select Type</option>
+                  <option value="Half">Half</option>
+                  <option value="Full">Full</option>
+                </select>
+                <div class="field-error"></div>
+              </div>
+              <div class="field">
+                <label for="lowerSize">Lowers Size <span class="req">*</span></label>
+                <select id="lowerSize" name="lowerSize" required>
+                  <option value="">Select Size</option>
+                  <option value="36">36</option>
+                  <option value="38">38</option>
+                  <option value="40">40</option>
+                  <option value="42">42</option>
+                  <option value="44">44</option>
+                  <option value="46">46</option>
+                  <option value="48">48</option>
+                </select>
+                <div class="field-error"></div>
+              </div>
+            </div>
+          </fieldset>
+
           <!-- Online Profiles -->
           <fieldset class="form-group">
             <legend>Online Profiles</legend>
@@ -249,13 +309,13 @@
 
             <div class="checkbox-field">
               <input type="checkbox" id="declareRules" required>
-              <label for="declareRules">I agree to abide by BPCL rules & regulations <span class="req">*</span></label>
+              <label for="declareRules">I agree to abide by BCL rules & regulations <span class="req">*</span></label>
               <div class="field-error"></div>
             </div>
 
             <div class="checkbox-field">
               <input type="checkbox" id="declareRefund" required>
-              <label for="declareRefund">I understand that ₹750 (50% of registration fee) is refundable if I am not selected in the final squad <span class="req">*</span></label>
+              <label for="declareRefund">I understand that ₹1,000 (50% of registration fee) is refundable if I am not selected in the final squad <span class="req">*</span></label>
               <div class="field-error"></div>
             </div>
           </fieldset>
@@ -274,7 +334,7 @@
             <div class="refund-banner-icon">💰</div>
             <div class="refund-banner-content">
               <strong>Refund Policy</strong>
-              <p>If you are NOT selected in the final BPCL squad, ₹750 (50% of your ₹1,500 fee) will be refunded to your original UPI account within 7 working days after team announcement.</p>
+              <p>If you are NOT selected in the final BCL squad, ₹1,000 (50% of your ₹2,000 fee) will be refunded to your original UPI account within 7 working days after team announcement.</p>
             </div>
           </div>
 
@@ -284,11 +344,11 @@
               <span class="payment-icon">🏏</span>
               <span>Registration Fee</span>
             </div>
-            <div class="payment-amount">₹ 1,500</div>
-            <p class="payment-league">Bareilly Premier Corporate League — Season 2026</p>
+            <div class="payment-amount">₹ 2,000</div>
+            <p class="payment-league">Bareilly Corporate League 3 — Season 2026</p>
 
             <div class="qr-wrapper">
-              <img id="upiQr" src="qr-code.png" alt="UPI QR — Scan to Pay ₹1500" class="qr-image"
+              <img id="upiQr" src="qr-code.png" alt="UPI QR — Scan to Pay ₹2000" class="qr-image"
                    onerror="this.style.display='none'; document.getElementById('qrFallback').style.display='flex';">
               <div id="qrFallback" class="qr-fallback" style="display:none;">
                 <span>QR Code</span>
@@ -302,7 +362,7 @@
               <code class="upi-id" id="upiId">9457962508@hdfc</code>
               <button type="button" class="btn-copy" id="copyUpi" title="Copy UPI ID">Copy</button>
             </div>
-            <p class="payment-note">Pay ₹1,500 · ₹750 refundable if not selected</p>
+            <p class="payment-note">Pay ₹2,000 · ₹1,000 refundable if not selected</p>
           </div>
 
           <!-- Toast -->
@@ -372,7 +432,7 @@
             <h3 class="success-title">You're Registered!</h3>
             <p class="success-subtitle">Your registration is under review. We'll confirm within 24 hours on your WhatsApp / Email once payment is verified.</p>
             <div class="success-summary" id="successSummary"></div>
-            <p class="success-refund-note">Reminder: ₹750 is refundable if you are not selected.</p>
+            <p class="success-refund-note">Reminder: ₹1,000 is refundable if you are not selected.</p>
             <button type="button" class="btn btn-gold" id="shareBtn">Share with a Friend</button>
           </div>
         </div>
@@ -388,11 +448,11 @@
         <ul class="refund-list">
           <li>
             <span class="refund-icon green">✅</span>
-            <div><strong>Registration fee:</strong> ₹1,500 (one-time, non-negotiable)</div>
+            <div><strong>Registration fee:</strong> ₹2,000 (one-time, non-negotiable)</div>
           </li>
           <li>
             <span class="refund-icon gold">💰</span>
-            <div><strong>If NOT selected:</strong> ₹750 (50%) refunded to your UPI account</div>
+            <div><strong>If NOT selected:</strong> ₹1,000 (50%) refunded to your UPI account</div>
           </li>
           <li>
             <span class="refund-icon red">❌</span>
@@ -413,11 +473,38 @@
     </div>
   </section>
 
-  <!-- ═══════════ §5 ABOUT BPCL ═══════════ -->
+  <!-- ═══════════ §5 STREAMING PARTNER ═══════════ -->
+  <section class="section partner-section" id="partner">
+    <div class="container">
+      <h2 class="section-title fade-in">Official Live Streaming Partner</h2>
+      <div class="partner-card fade-in">
+        <a href="https://youtube.com/@ascricfiles?si=xfIpEXczgGewlLdI" target="_blank" rel="noopener" class="partner-link">
+          <img src="as-cric-files-logo.png" alt="AS Cric Files — Official Live Streaming Partner" class="partner-logo">
+          <span class="partner-name">AS Cric Files</span>
+          <span class="partner-badge">YouTube</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ §6 VENUE ═══════════ -->
+  <section class="section venue-section" id="venue">
+    <div class="container">
+      <h2 class="section-title fade-in">Venue</h2>
+      <div class="venue-card fade-in">
+        <div class="venue-icon">📍</div>
+        <h3 class="venue-name">GP Cricket Ground</h3>
+        <p class="venue-address">46, Part 3rd A, Suresh Sharma Nagar, Bareilly, Uttar Pradesh 243006</p>
+        <a href="https://maps.app.goo.gl/mzXbxak5YeVzdWTc6" target="_blank" rel="noopener" class="btn btn-outline venue-map-btn">Open in Google Maps →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ §7 ABOUT BCL ═══════════ -->
   <section class="section about-section" id="about">
     <div class="container">
-      <h2 class="section-title fade-in">About BPCL</h2>
-      <p class="about-text fade-in">The Bareilly Premier Corporate League (BPCL) is Bareilly's most exciting cricket tournament, bringing together the best local talent for a thrilling season of competitive cricket. Whether you're a seasoned player or an emerging talent, BPCL gives you the stage to showcase your skills, compete with the best, and be part of something unforgettable.</p>
+      <h2 class="section-title fade-in">About BCL</h2>
+      <p class="about-text fade-in">The Bareilly Corporate League (BCL) is Bareilly's most exciting cricket tournament, bringing together the best local talent for a thrilling season of competitive cricket. Whether you're a seasoned player or an emerging talent, BCL gives you the stage to showcase your skills, compete with the best, and be part of something unforgettable.</p>
       <div class="stats-row fade-in">
         <div class="stat">
           <div class="stat-number">8+</div>
@@ -450,17 +537,17 @@
       <div class="footer-top">
         <div class="footer-brand">
           <span class="logo-shield">🏏</span>
-          <span class="logo-text">BPCL</span>
+          <span class="logo-text">BCL 3</span>
         </div>
         <div class="footer-socials">
           <!-- 🔴 REPLACE: Add your social links -->
           <a href="#" aria-label="Instagram" class="social-icon">📷</a>
-          <a href="#" aria-label="YouTube" class="social-icon">▶️</a>
+          <a href="https://youtube.com/@ascricfiles?si=xfIpEXczgGewlLdI" target="_blank" rel="noopener" aria-label="YouTube" class="social-icon">▶️</a>
           <a href="#" aria-label="Facebook" class="social-icon">📘</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Bareilly Premier Corporate League. All rights reserved.</p>
+        <p>&copy; 2026 Bareilly Corporate League. All rights reserved.</p>
         <p class="footer-tagline">Powered by love for cricket 🏏</p>
       </div>
     </div>
