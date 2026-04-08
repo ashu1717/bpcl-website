@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════════════
-   BAREILLY CORPORATE LEAGUE 3 — script.js
+   BAREILLY CORPORATE PREMIER LEAGUE 2 — script.js
    Multi-step form · Validation · UPI copy · Supabase submit
    ═══════════════════════════════════════════════════════════════════════ */
 
@@ -347,8 +347,8 @@
   // ─── Share Button ─────────────────────────────────────────────────
   shareBtn.addEventListener('click', function () {
     var shareData = {
-      title: 'Bareilly Corporate League 3 — Player Registration',
-      text: 'Register for BCL 3 — Season 2026! Pay ₹2,000 and showcase your cricket talent. 50% refundable if not selected.',
+      title: 'Bareilly Corporate Premier League 2 — Player Registration',
+      text: 'Register for BPCL 2 — Season 2026! Pay ₹2,000 and showcase your cricket talent. 50% refundable if not selected.',
       url: window.location.href
     };
 
