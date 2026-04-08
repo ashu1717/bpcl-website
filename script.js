@@ -202,7 +202,7 @@
     var valid = true;
     var firstErr = null;
 
-    stepEl.querySelectorAll('input[required], select[required], textarea[required]').forEach(function (el) {
+    stepEl.querySelectorAll('input[required]:not([type="checkbox"]), select[required], textarea[required]').forEach(function (el) {
       if (el.disabled) return;
       if (!validateField(el)) {
         valid = false;
