@@ -166,8 +166,6 @@
           showFieldError(input, 'Enter a valid 10-digit mobile number');
         } else if (name === 'pincode') {
           showFieldError(input, 'Enter a valid 6-digit PIN code');
-        } else if (name === 'txnId') {
-          showFieldError(input, 'Enter a valid transaction ID');
         } else {
           showFieldError(input, 'Invalid format');
         }
@@ -306,7 +304,6 @@
         tshirt_size:      parseInt(document.getElementById('tshirtSize').value) || null,
         lower_size:       document.getElementById('lowerSize').value,
         cricheroes_link:  document.getElementById('cricheroes').value.trim(),
-        upi_transaction_id: document.getElementById('txnId').value.trim(),
         payment_app:      document.getElementById('paymentApp').value,
         screenshot_url:   screenshotUrl,
         payment_status:   'pending'
@@ -331,10 +328,8 @@
 
   function showSuccess() {
     var name = document.getElementById('fullName').value.trim();
-    var txn  = document.getElementById('txnId').value.trim();
     document.getElementById('successSummary').innerHTML =
-      '<p><strong>Player:</strong> ' + escapeHtml(name) + '</p>' +
-      '<p><strong>Transaction ID:</strong> ' + escapeHtml(txn) + '</p>';
+      '<p><strong>Player:</strong> ' + escapeHtml(name) + '</p>';
     goToStep(3);
   }
 
