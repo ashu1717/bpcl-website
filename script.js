@@ -315,6 +315,28 @@
 
       if (insertError) throw new Error('Registration failed: ' + insertError.message);
 
+      // Send confirmation email (best-effort, don't block registration)
+      try {
+        await fetch(SUPABASE_URL + '/functions/v1/send-registration-email', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + SUPABASE_ANON
+          },
+          body: JSON.stringify({
+            email: registration.email,
+            full_name: registration.full_name,
+            playing_role: registration.playing_role,
+            tshirt_type: registration.tshirt_type,
+            tshirt_size: registration.tshirt_size,
+            lower_size: registration.lower_size,
+            jersey_number: registration.jersey_number
+          })
+        });
+      } catch (emailErr) {
+        console.warn('Confirmation email failed:', emailErr);
+      }
+
       showSuccess();
     } catch (err) {
       console.error(err);
